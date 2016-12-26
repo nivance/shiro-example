@@ -147,7 +147,6 @@ public class OnlineSession extends SimpleSession {
      * @throws ClassNotFoundException if a required class needed for instantiation is not available in the present JVM
      * @since 1.0
      */
-    @SuppressWarnings({"unchecked"})
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
         short bitMask = in.readShort();

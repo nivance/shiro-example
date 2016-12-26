@@ -1,21 +1,26 @@
 package com.github.zhangkaitao.shiro.chapter10.session.scheduler;
 
-import com.github.zhangkaitao.shiro.chapter10.JdbcTemplateUtils;
-import com.github.zhangkaitao.shiro.chapter10.SerializableUtils;
-import org.apache.shiro.session.InvalidSessionException;
-import org.apache.shiro.session.Session;
-import org.apache.shiro.session.mgt.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.util.ReflectionUtils;
-
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.shiro.session.Session;
+import org.apache.shiro.session.mgt.AbstractValidatingSessionManager;
+import org.apache.shiro.session.mgt.DefaultSessionKey;
+import org.apache.shiro.session.mgt.DefaultSessionManager;
+import org.apache.shiro.session.mgt.SessionKey;
+import org.apache.shiro.session.mgt.SessionValidationScheduler;
+import org.apache.shiro.session.mgt.ValidatingSessionManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.util.ReflectionUtils;
+
+import com.github.zhangkaitao.shiro.chapter10.JdbcTemplateUtils;
+import com.github.zhangkaitao.shiro.chapter10.SerializableUtils;
 
 /**
  * <p>User: Zhang Kaitao

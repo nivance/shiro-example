@@ -1,7 +1,6 @@
 package com.github.zhangkaitao.shiro.chapter10.web.listener;
 
 import org.apache.shiro.session.Session;
-import org.apache.shiro.session.SessionListener;
 import org.apache.shiro.session.SessionListenerAdapter;
 
 /**
